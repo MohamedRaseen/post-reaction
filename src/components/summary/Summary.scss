@@ -1,0 +1,58 @@
+@import '../../mixins';
+
+.summary-container{
+    margin-top: 20px;
+    max-width: 500px;
+
+    .title{
+        @include create-font('IBM Plex Sans',bolder,18, 0.5);
+    }
+    .collapse{
+        margin-top: 10px;
+        .card{
+            max-height: 800px;
+            overflow: scroll;
+            .card-body{
+                .emoji-tab{
+                    display: flex;
+                    .tab{
+                        flex-grow: 1;
+                        text-align: center;
+                        cursor: pointer;
+                        .emoji-count{
+                            span{
+                                position: relative;
+                                span{
+                                    position: absolute;
+                                    top: -6px;
+                                    margin: 0px -3px;
+                                }
+                            }
+                        }
+                        &.active{
+                            border-bottom: 2px solid #0F62FE;
+                        }
+                    }
+                }
+                .reaction-summary{
+                    margin-top: 10px;
+                    .reaction{
+                        img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                        .emoji{
+                            margin: 0 10px;
+                        }
+                        span{
+                            &:first-child{
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

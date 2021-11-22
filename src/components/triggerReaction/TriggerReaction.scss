@@ -1,0 +1,63 @@
+
+   .trigger-reaction-container{
+       display: flex;
+       margin-top: 10px;
+       .reacted-container{
+           display: flex;
+           .emoji-count{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F4F4F4;
+            border-radius: 100px;
+            margin-right: 10px;
+            padding: 5px;
+            color: #525252;
+            width: 60px;
+            height: 30px;
+            &.user-reacted{
+                border: 1px solid #0F62FE;
+            }
+            span{
+                position: relative;
+                span{
+                    position: absolute;
+                    top: -3px;
+                    margin: 0px -3px;
+                }
+            }
+           }
+       }
+        .reaction-container{
+            width:30px;
+            height:30px;
+            text-align: center;
+            background: #EDEEF0;
+            border-radius: 50%;
+            cursor: pointer;
+            img{
+                height: 15px;
+                width: 15px;
+            }
+        }
+   }
+
+   .tooltip-arrow::before{
+       display: none;
+   }
+
+   .popover-inner .emoji-list{
+       display: flex;
+       .emoji{
+           cursor: pointer;
+           position: relative;
+           height: 22px;
+           width: 22px;
+           text-align: center;
+           transition:all 0.3s ease;
+           &:hover{
+            transform: scale(1.8);
+           }
+       }
+   }
+   
